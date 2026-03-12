@@ -30,3 +30,21 @@ void input() { // procedure input
 void insertionsort() { // procedure insertion sort
     int temp;
     int j;
+    
+    for (int i = 1; i < n; i++) { // Dimulai dari 1 karena elemen pertama dianggap sudah terurut
+        temp = arr[i];
+        j = i - 1;
+
+        while (j >= 0 && arr[j] > temp) {
+            arr[j + 1] = arr[j];
+            j--;
+        }
+        arr[j + 1] = temp;
+
+        // Menampilkan langkah-langkah pengurutan (Step)
+        cout << "\nStep " << i << ": ";
+        for (int k = 0; k < n; k++) {
+            cout << arr[k] << " ";
+        }
+    }
+}
