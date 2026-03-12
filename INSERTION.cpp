@@ -30,7 +30,7 @@ void input() { // procedure input
 void insertionsort() { // procedure insertion sort
     int temp;
     int j;
-    
+
     for (int i = 1; i < n; i++) { // Dimulai dari 1 karena elemen pertama dianggap sudah terurut
         temp = arr[i];
         j = i - 1;
@@ -47,4 +47,15 @@ void insertionsort() { // procedure insertion sort
             cout << arr[k] << " ";
         }
     }
+}
+void display() {
+    cout << endl;
+    cout << "\n===============================";
+    cout << "\nElement Array" << endl;
+    cout << "\n===============================";
+
+    for (int j = 0; j < n; j++) {
+        cout << arr[j] << endl;
+    }
+    cout << endl;
 }
